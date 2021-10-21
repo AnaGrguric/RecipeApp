@@ -2,25 +2,27 @@ import Star from "../icons/star.svg";
 import Time from "../icons/time.svg";
 import Portion from "../icons/portion.svg";
 import BtnSave from "./BtnSave";
+import EmptyState from "./EmptyState";
 
 function Card(props) {
   const recipeArray = props.recipe;
 
+  const filteredRecipeArray = recipeArray.filter((val) => {
+    if (props.input === "") {
+      return val;
+    } else if (val.name.toLowerCase().includes(props.input.toLowerCase())) {
+      return val;
+    }
+    return false;
+  });
+
   return (
     <div>
       <div className="card-row">
-        {recipeArray
-          .filter((val) => {
-            if (props.input === "") {
-              return val;
-            } else if (
-              val.name.toLowerCase().includes(props.input.toLowerCase())
-            ) {
-              return val;
-            }
-            return false;
-          })
-          .map((item, i) => {
+        {filteredRecipeArray == 0 ? (
+          <EmptyState />
+        ) : (
+          filteredRecipeArray.map((item, i) => {
             return (
               <div className="card" key={i}>
                 <div className="card-img-center">
@@ -50,13 +52,16 @@ function Card(props) {
                 <div className="recipe">
                   <p className="card-text">Ingredients:</p>
                   <ul className="ingredients-list">
-                    {item.ingredients.map((ing, i) =>  <li key={i}>{ing}</li>)}
-                    </ul>
+                    {item.ingredients.map((ing, i) => (
+                      <li key={i}>{ing}</li>
+                    ))}
+                  </ul>
                 </div>
                 <BtnSave />
               </div>
             );
-          })}
+          })
+        )}
       </div>
     </div>
   );

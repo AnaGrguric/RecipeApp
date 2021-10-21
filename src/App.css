@@ -50,7 +50,7 @@ body {
 
 .card {
   background-color: #ffffff;
-  width: 264px;
+  width: 277px;
   height: 370px;
   border-radius: 16px;
   padding: 16px;
@@ -159,20 +159,19 @@ div.card-img-center {
   right: 24px;
   bottom: -14px;
   display: flex;
-  justify-content: space-evenly;
-}
-
-.btn-save p {
-  font-weight: bold;
+  justify-content: center;
   color: #ffffff;
-  margin: 0px;
-  margin-right: 8px;
+  font-weight: bold;
+  gap: 6px;
 }
 
-.btn-save:hover,
-.btn-save p:hover {
+.btn-save:hover {
   background-color: #ededf4;
   color: #f52f57;
+}
+
+img .heart-icon > path:hover {
+  fill: #f52f57!important;
 }
 
 .btn-active {
@@ -242,6 +241,7 @@ div.card-img-center {
   height: 24px;
   border-radius: 8px;
   border: 0px;
+  padding-left: 8px;
 }
 
 .inputs-row {
@@ -252,9 +252,38 @@ div.card-img-center {
 
 .input-fields.small input{
   width: 99px;
-  padding-left: 8px;
 }
 
 .ingredients-inputs input {
   width: 100%;
+}
+
+input[type="file"] {
+  border-radius: 1px;
+}
+
+input.focus-visible {
+  border: 1px solid red!important;
+  border-color: red;
+}
+
+li::marker {
+  color: #333;
+}
+.empty-state {
+  position: absolute;
+  top: 32%;
+  right: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(50%,50%);
+  color: #7f7a7a;
+}
+
+.empty-state img {
+  width: 40px;
+  height: auto;
+  align-self: center;
+  margin-bottom: 16px;
 }

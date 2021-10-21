@@ -4,7 +4,7 @@ function BtnSave() {
   return (
     <button className="btn-save">
       <img src={Heart} alt="heart-icon"></img>
-      <p>Save</p>
+      Save
     </button>
   );
 }

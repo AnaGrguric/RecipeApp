@@ -47,7 +47,7 @@ function PopupAddRecipe(props) {
       img: recipeImage ? recipeImage : "./images/recipe1.jpeg",
       star: 4.5,
       difficulty: recipeDifficulty,
-      time: recipeTime.toString() + "min",
+      time: recipeTime.toString() + " min",
       portion: recipePortion,
       ingredients: [recipeIngredient],
     }
