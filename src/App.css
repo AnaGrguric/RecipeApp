@@ -196,6 +196,10 @@ div.card-img-center {
   align-items: center;
 }
 
+.btn-submit {
+  margin-top: 40px;
+}
+
 .btn-add {
   position: fixed;
   right: 40px;
@@ -206,12 +210,14 @@ div.card-img-center {
 
 .popup-add-recipe {
   position: absolute;
-  top: 0%;
+  top: -6%;
   right: 50%;
   transform: translate(50%, 50%);
   background-color: #ededf4;
   padding: 40px;
   border: 1px solid #333;
+  filter: drop-shadow(1px 2px 1px rgba(157, 138, 138, 0.2));
+  border-radius: 8px;
 }
 
 .popup-add-recipe h5 {
@@ -245,11 +251,8 @@ div.card-img-center {
 }
 
 .input-fields.small input{
-  width: 80px;
-}
-
-.ingredients-inputs {
-  margin-bottom: 40px;
+  width: 99px;
+  padding-left: 8px;
 }
 
 .ingredients-inputs input {

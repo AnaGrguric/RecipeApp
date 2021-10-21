@@ -7,6 +7,7 @@ function PopupAddRecipe(props) {
   const [recipeTime, setRecipeTime] = useState("");
   const [recipePortion, setRecipePortion] = useState("");
   const [recipeIngredient, setRecipeIngredient] = useState("");
+  const [recipeImage, setRecipeImage] = useState("");
 
  /*  const handleNewInputField = (e) => {
     const ingredientInputs = document.querySelector(".ingredients-inputs");
@@ -34,15 +35,19 @@ function PopupAddRecipe(props) {
     setRecipeIngredient(e.target.value)
   }
 
+  const handleRecipeImage = (e) => {
+    setRecipeImage(`./images/${e.target}`)
+  }
+
   const handleRecipeData = (e) => {
     e.preventDefault();
 
     const newRecipeData = {
       name: recipeName,
-      img: "./images/recipe1.jpeg",
+      img: recipeImage ? recipeImage : "./images/recipe1.jpeg",
       star: 4.5,
       difficulty: recipeDifficulty,
-      time: recipeTime,
+      time: recipeTime.toString() + "min",
       portion: recipePortion,
       ingredients: [recipeIngredient],
     }
@@ -55,6 +60,7 @@ function PopupAddRecipe(props) {
     setRecipeTime("");
     setRecipePortion("");
     setRecipeIngredient("");
+    setRecipeImage("");
 
   }
 
@@ -89,6 +95,10 @@ function PopupAddRecipe(props) {
         <input type="text" value={recipeIngredient} onChange={handleRecipeIngredient}></input>
         </div>
         {/* <span onClick={handleNewInputField}>+</span> */}
+      </div>
+      <div className="input-fields">
+        <label>Uploade image:</label>
+        <input type="file" name={recipeImage} onChange={handleRecipeImage}></input>
       </div>
       <button type="submit" className="btn-submit">Add Recipe</button>
     </form>
