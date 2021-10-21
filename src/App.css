@@ -255,8 +255,14 @@ img .heart-icon > path:hover {
   width: 99px;
 }
 
+.ingredients-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
 .ingredients-inputs input {
   width: 100%;
+  margin-bottom: 8px;
 }
 
 input[type="file"] {

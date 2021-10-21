@@ -6,6 +6,7 @@ import EmptyState from "./EmptyState";
 
 function Card(props) {
   const recipeArray = props.recipe;
+  console.log(recipeArray)
 
   const filteredRecipeArray = recipeArray.filter((val) => {
     if (props.input === "") {
@@ -19,7 +20,7 @@ function Card(props) {
   return (
     <div>
       <div className="card-row">
-        {filteredRecipeArray === 0 ? (
+        {filteredRecipeArray == 0 ? (
           <EmptyState />
         ) : (
           filteredRecipeArray.map((item, i) => {

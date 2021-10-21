@@ -24,7 +24,7 @@ const RecipesData = [
         star: 4.5,
         difficulty: "easy",
         time: 20 + " min",
-        portion: 4,
+        portion: 2,
         description: "lorem ipsum.....",
         ingredients: ["4 eggs", "1 cup of oats", "1 scope of protein powder", "1 tbs of vanilla extract"],
     },
