@@ -8,7 +8,7 @@ function BtnAddNew(props){
     return(
         <div>
             <button className="btn-add" onClick={() => setOpenPopup(true)}><img src={Plus} alt="plus-icon"></img>Add New</button>
-            { openPopup && <PopupAddRecipe onAdd={props.onAdd} close={false}/>}
+            { openPopup && <PopupAddRecipe onAdd={props.onAdd} close={() => setOpenPopup(false)}/>}
         </div>
     )
 }

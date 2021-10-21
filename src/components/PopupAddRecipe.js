@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CloseIcon from "../icons/closeIcon.svg";
 
 function PopupAddRecipe(props) {
   const [recipeName, setRecipeName] = useState("");
@@ -64,6 +65,7 @@ function PopupAddRecipe(props) {
 
   return (
     <form onSubmit={handleRecipeData} className="popup-add-recipe">
+      <img src={CloseIcon} alt="close-icon" className="close-icon" onClick={props.close}></img>
       <h5>Enter recipe data:</h5>
       <div className="input-fields">
         <label>Recipe name:</label>

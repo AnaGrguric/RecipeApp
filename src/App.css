@@ -294,3 +294,10 @@ li::marker {
   align-self: center;
   margin-bottom: 16px;
 }
+
+.close-icon {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+}
