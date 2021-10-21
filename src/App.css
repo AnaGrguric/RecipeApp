@@ -80,6 +80,7 @@ div.card-img-center {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #ededf4;
 }
 
 .card-content {

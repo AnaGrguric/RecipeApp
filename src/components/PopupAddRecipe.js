@@ -36,7 +36,7 @@ function PopupAddRecipe(props) {
   }
 
   const handleRecipeImage = (e) => {
-    setRecipeImage(`./images/${e.target}`)
+    setRecipeImage(`./images/${e.target.files}`)
   }
 
   const handleRecipeData = (e) => {
@@ -44,7 +44,7 @@ function PopupAddRecipe(props) {
 
     const newRecipeData = {
       name: recipeName,
-      img: recipeImage ? recipeImage : "./images/recipe1.jpeg",
+      img: recipeImage ? recipeImage : "./images/image.png",
       star: 4.5,
       difficulty: recipeDifficulty,
       time: recipeTime.toString() + " min",
@@ -69,7 +69,7 @@ function PopupAddRecipe(props) {
       <h5>Enter recipe data:</h5>
       <div className="input-fields">
         <label>Recipe name:</label>
-        <input type="text" value={recipeName} onChange={handleRecipeName} required></input>
+        <input type="text" value={recipeName} onChange={handleRecipeName} placeholder="Enter recipe name" required></input>
       </div>
       <div className="inputs-row">
         <div className="input-fields small">
@@ -82,17 +82,17 @@ function PopupAddRecipe(props) {
         </div>
       <div className="input-fields small">
         <label>Time</label>
-        <input type="number" value={recipeTime} onChange={handleRecipeTime}></input>
+        <input type="number" value={recipeTime} onChange={handleRecipeTime} placeholder="In minutes"></input>
       </div>
       <div className="input-fields small">
         <label>Portions</label>
-        <input type="number" value={recipePortion} onChange={handleRecipePortion}></input>
+        <input type="number" value={recipePortion} onChange={handleRecipePortion} placeholder="Persons"></input>
       </div>
       </div>
       <div className="input-fields">
         <label>Ingredients:</label>
         <div className="ingredients-inputs">
-        <input type="text" value={recipeIngredient} onChange={handleRecipeIngredient}></input>
+        <input type="text" value={recipeIngredient} onChange={handleRecipeIngredient} placeholder="Enter ingredients"></input>
         </div>
         {/* <span onClick={handleNewInputField}>+</span> */}
       </div>

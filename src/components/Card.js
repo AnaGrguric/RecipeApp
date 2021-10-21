@@ -19,7 +19,7 @@ function Card(props) {
   return (
     <div>
       <div className="card-row">
-        {filteredRecipeArray == 0 ? (
+        {filteredRecipeArray === 0 ? (
           <EmptyState />
         ) : (
           filteredRecipeArray.map((item, i) => {
