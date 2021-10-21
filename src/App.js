@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import BtnAddNew from "./components/BtnAddNew";
+import Card from "./components/Card";
+import TopNavbar from "./components/TopNavbar";
+import SearchBar from "./components/SearchBar";
+import RecipesData from "./RecipesData";
 
 function App() {
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [recipeData, setRecipeDate] = useState(RecipesData)
+
+  const addNewRecipe = (recipe) => {
+    setRecipeDate((prevRecipes) => {
+      return [recipe, ...prevRecipes]
+    })
+
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopNavbar />
+      <SearchBar search={e => {setSearchTerm(e.target.value)}}/>
+      <Card input={searchTerm} recipe={recipeData}/>
+      <BtnAddNew onAdd={addNewRecipe} />
     </div>
   );
 }
