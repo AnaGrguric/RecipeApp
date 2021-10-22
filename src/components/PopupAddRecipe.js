@@ -107,15 +107,12 @@ function PopupAddRecipe(props) {
       </div>
       <div className="input-fields">
         <label>Ingredients:</label>
-        <div className="ingredients-inputs">
           <input
             type="text"
             value={recipeIngredient}
             onChange={handleRecipeIngredient}
             placeholder="Enter ingredients seperate by comma"
           ></input>
-        </div>
-       {/*  <span onClick={handleNewInputField}>+ Add more</span> */}
       </div>
       <div className="input-fields">
         <label>Uploade image:</label>

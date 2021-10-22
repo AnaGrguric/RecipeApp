@@ -129,7 +129,7 @@ div.card-img-center {
   font-size: 14px;
 }
 
-.tag:nth-child(2) p{
+.tag:nth-child(2) p {
   margin-left: 0px;
 }
 /* Ingredients */
@@ -172,7 +172,7 @@ div.card-img-center {
 }
 
 img .heart-icon > path:hover {
-  fill: #f52f57!important;
+  fill: #f52f57 !important;
 }
 
 .saved {
@@ -187,7 +187,8 @@ img .heart-icon > path:hover {
 
 /* Btn add new recipe */
 
-.btn-add, .btn-submit {
+.btn-add,
+.btn-submit {
   display: flex;
   justify-content: space-around;
   padding: 4px;
@@ -243,7 +244,8 @@ img .heart-icon > path:hover {
   margin-top: 16px;
 }
 
-.input-fields input, .input-fields select {
+.input-fields input,
+.input-fields select {
   height: 24px;
   border-radius: 8px;
   border: 0px;
@@ -256,7 +258,7 @@ img .heart-icon > path:hover {
   gap: 24px;
 }
 
-.input-fields.small input{
+.input-fields.small input {
   width: 99px;
 }
 
@@ -275,7 +277,7 @@ input[type="file"] {
 }
 
 input.focus-visible {
-  border: 1px solid red!important;
+  border: 1px solid red !important;
   border-color: red;
 }
 
@@ -289,7 +291,7 @@ li::marker {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  transform: translate(50%,50%);
+  transform: translate(50%, 50%);
   color: #7f7a7a;
 }
 
@@ -304,5 +306,21 @@ li::marker {
   position: absolute;
   right: 8px;
   top: 8px;
+}
 
+@media screen and (max-width: 576px) {
+  .popup-add-recipe {
+    max-width: 320px;
+    padding: 16px;
+  }
+
+  .input-fields.small input {
+    width: 85px;
+  }
+
+  .btn-add {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+  }
 }

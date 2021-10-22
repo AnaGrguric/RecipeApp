@@ -10,7 +10,7 @@ const RecipesData = [
     },
     {
         name: "Cheese",
-        img: "./images/recipe2.png",
+        img: "./images/recipe2.jpg",
         star: 4.5,
         difficulty: "easy",
         time: 10 + " min",
