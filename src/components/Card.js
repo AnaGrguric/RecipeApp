@@ -58,7 +58,7 @@ function Card(props) {
                     ))}
                   </ul>
                 </div>
-                <BtnSave />
+                <BtnSave onLike={props.onSave}/>
               </div>
             );
           })

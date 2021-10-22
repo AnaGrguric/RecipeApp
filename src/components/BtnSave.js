@@ -1,10 +1,13 @@
 import Heart from "../icons/heart.svg";
 
-function BtnSave() {
+function BtnSave(props) {
+
+ 
+
   return (
-    <button className="btn-save">
+    <button className="btn-save" onClick={props.onLike}>
       <img src={Heart} alt="heart-icon"></img>
-      Save
+      Like
     </button>
   );
 }

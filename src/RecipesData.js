@@ -19,7 +19,7 @@ const RecipesData = [
         ingredients: ["1 cheese"],
     },
     {
-        name: "American panecakes",
+        name: "American pancakes",
         img: "./images/recipe4.jpg",
         star: 4.5,
         difficulty: "easy",

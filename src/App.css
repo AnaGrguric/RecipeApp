@@ -175,6 +175,11 @@ img .heart-icon > path:hover {
   fill: #f52f57!important;
 }
 
+.saved {
+  background-color: #ededf4;
+  color: #f52f57;
+}
+
 .btn-active {
   background-color: #ededf4;
   color: #f52f57;

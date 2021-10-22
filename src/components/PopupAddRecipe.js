@@ -82,7 +82,7 @@ function PopupAddRecipe(props) {
           <label>Difficulty</label>
           <select onChange={handleRecipeDifficulty}>
             <option>easy</option>
-            <option>meddium</option>
+            <option>medium</option>
             <option>hard</option>
           </select>
         </div>
